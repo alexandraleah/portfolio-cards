@@ -1,0 +1,230 @@
+/*
+Colors:
+  #373733 (Jet)
+  #334E58 (Dark Slate Blue)
+  #E8E9F3 (Glitter)
+  #f0f0ee (Isabelline)
+Text
+  Body: Roboto, Jet, size 15px
+  Navbar and heading: Alegreya, uppercase
+
+Fonts color and line height for body*/
+body {
+    font: 400 15px Roboto, sans-serif;
+    line-height: 1.8;
+    color: #373733;
+}
+
+/*class to center a div*/
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+/*removes gutters from columns and rows*/
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/*styles for navbar*/
+.navbar {
+    margin-bottom: 0;
+    background-color: #334E58;
+    z-index: 9999;
+    border: 0;
+    font-size: 15px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: 'Alegreya', serif;
+    text-transform: uppercase;
+}
+
+
+.navbar li a, .navbar .navbar-brand {
+    color: #E8E9F3 !important;
+}
+
+/*navbar button changes color on hover*/
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #E8E9F3 !important;
+    background-color: #102C37 !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #E8E9F3 !important;
+}
+
+/*styles for jumbotron*/
+.jumbotron {
+    background-color: #334E58; /* dark slate blue */
+    color: #E8E9F3; /* glitter */
+    padding: 100px 25px 50px 25px;
+    font-family: 'Alegreya', serif;
+}
+
+/*Styles for section headings*/
+h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #373733;
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-family: 'Alegreya', serif;
+}
+
+/*Styles for section subheading*/
+h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #2e2e30;
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+
+/*adds padding for sections*/
+.section {
+    padding: 60px 50px;
+}
+
+/*alternating background color for sections*/
+.bg-other {
+    background-color: #f0f0ee;
+}
+
+/*adds bottom margin to images*/
+img {
+  margin-bottom: 10px;
+}
+
+/* Color of icons*/
+i {
+    color: #373733;
+}
+
+/*styles for tooltips*/
+.tooltip > .tooltip-inner {
+     background-color: #373733;
+     color: #E8E9F3;
+ }
+
+/*styles cursor as pointer*/
+.pointer {cursor: pointer;}
+
+/*card flip adapted from https://davidwalsh.name/css-flip*/
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+
+/*class applied by script to flip the card*/
+.flip {
+  transform: rotateY(180deg);
+}
+
+/*sets size of card*/
+.flip-container, .front, .back {
+	height: 430px;
+  margin: 20px auto;
+  width: 100%;
+  max-width:480px;
+
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+  background-color: #ffffff;
+  padding:10px;
+  line-height: 1.8;
+  overflow: auto;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+
+}
+
+/*sets size of card's main content*/
+.portfolio-content {
+  width: 100%;
+  padding: 0px;
+  overflow-y: auto;
+}
+
+/*sets height of image on front of card*/
+.front .portfolio-content {
+  height: 315px;
+}
+
+/*sets height of main content on back of card*/
+.back .portfolio-content {
+  height: 370px;
+}
+
+/*sets background image for each card by id*/
+#cayuga {
+     background: url(images/cayuga-flowers.jpg);
+    background-size: cover;
+}
+
+#portal {
+  background: url(images/map.png);
+  background-size: cover;
+}
+
+#flagging {
+  background: url(images/flagging.jpg);
+}
+
+/*Styles for footer*/
+footer {
+  color:#E8E9F3;
+  background-color: #334E58;
+  padding: 20px;
+  padding: 10px 10px
+}
+
+footer h2 {
+  color: #E8E9F3;
+}
+
+/*links*/
+footer a {
+  color: #E8E9F3;
+  text-decoration:none;
+}
+
+/*icons*/
+footer i {
+    color: #E8E9F3;
+}
