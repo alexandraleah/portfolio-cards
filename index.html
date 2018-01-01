@@ -1,7 +1,10 @@
+<!--Virtual cards to show off your portfolio. Front shows image of your project. Back shows description
+Uses boostrap 3
+Card flip inspired by https://davidwalsh.name/css-flip-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Alexandra Ash</title>
+    <title>Portfolio Cards</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--Include Bootstrap -->
@@ -10,83 +13,48 @@
     <link rel="stylesheet" href="style.css">
 <!--Include font awesome-->
     <script src="https://use.fontawesome.com/9d55932b69.js"></script>
-<!--Include Google fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
 <!-- Include JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!--Include bootstrap javascript file-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
-<!--theme adapted from w3schools' Bootstrap company theme https://www.w3schools.com/bootstrap/trybs_theme_company_full.htm-->
-<!--Scrollspy allows the nav bar to reflect where in the page the user has scrolled-->
-  <body data-spy="scroll" data-target=".navbar" data-offset="60">
-<!--Nav bar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <i class="icon-bar"></i>
-            <i class="icon-bar"></i>
-            <i class="icon-bar"></i>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#skills">SKILLS</a></li>
-            <li><a href="#connect">CONNECT</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-<!--Jumbotron-->
-    <div class="jumbotron text-center" id="myPage">
-      <h1>Alexandra Ash</h1>
-      <p>front-end web developer</p>
-    </div>
-<!-- about section -->
-    <div id="about" class="container-fluid section">
-      <h2 class="text-center">About Alexandra</h2>
-<!--first row-->
-      <div class="row">
-<!--Small left column-->
-        <div class="col-md-3">
-          <img src="images/alex.jpeg" class="img-circle center-block img-responsive"></img>
-        </div>
-<!--main content-->
-        <div class="col-md-9">
-          <p>My career in the environmental sector has taught me that well designed software and web apps translate to mission accomplished. From mobile apps that allow volunteers to share data, to interactive web applications to educate the public, to cloud based databases to track donors, the right technology makes all the difference.</p>
-          <p> My interest in web technologies led me to pursue a certificate in web development. This training combined with experience as Director of Communications at a local non-profit and a B.A. in Public Policy from the University of Chicago has provided me with a unique perspective and real world experience. In every project I strive to build user-friendly, interactive applications with powerful impact. </p>
-        </div>
-      </div>
-    </div>
-<!--portfolio section-->
-    <div id="portfolio" class="container-fluid bg-other section">
-      <h2 class="text-center">Portfolio</h2>
-      <div class="row">
-<!--card flip adapted from https://davidwalsh.name/css-flip -->
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="flip-container">
-        	   <div class="flipper pointer">
+  <body>
+
+<h2 class="text-center">My Portfolio</h2>
+<!--Creates row for the project cards-->
+<div class="row">
+<!--Begin first card-->
+<!--Set width of card based on number of columns. For this example each card is 4 columns on large screens, 6 on medium and 12 on small-->
+  <div class="col-sm-12 col-md-6 col-lg-4">
+<!-- Container around the card.  Keeps perspective-->
+    <div class="flip-container">
+<!-- The card that will flip. Pointer class assigns the pointer cursor indicating that it could be clicked-->
+      <div class="flipper pointer">
 <!-- Front of card-->
-        		     <div class="front">
-                   <div class="row no-gutters">
-                     <div class="col-xs-12 no-gutters">
-<!--Background image-->
-                       <div id="cayuga" class="portfolio-content">
-                       </div>
-                       <h4 class="text-center">Cayuga Daylilies</h4>
-                     </div>
-                   </div>
-<!--Buttons linked to website and github-->
-                   <div class="row no-gutters">
-                     <div class="col-xs-2 col-xs-offset-4">
-                       <a href="http://cayugadaylilies.com/" target="_blank" data-toggle="tooltip" title="Website"><i class="fa fa-globe pointer" title="View Website" style="font-size:30px"></i></a>
-                     </div>
+        <div class="front">
+<!--First row on front of card-->
+          <div class="row no-gutters">
+<!--Column on front of card takes up entire card. Class no-gutters romoves the gutters-->
+            <div class="col-xs-12 no-gutters">
+<!--Set the background image of this div to be the image for the project-->
+                <div id="first-project" class="portfolio-content">
+                </div>
+                <h4 class="text-center">Title Goes Here</h4>
+            </div>
+          </div>
+<!--Second row on front of card-->
+<!--Icons linked to website and github. Arrow to help users know to click to make the card flip
+Creates row for icons-->
+          <div class="row no-gutters">
+<!--First icon takes up two columns on xs device. Is moved over by 4 columns-->
+            <div class="col-xs-2 col-xs-offset-4">
+<!--Set icon to link to project website. Uses Font Awesome icons. Tooltip helps users understand button. Title on icon helps users with screen readers understand icon-->
+              <a href="http://cayugadaylilies.com/" target="_blank" data-toggle="tooltip" title="Website"><i class="fa fa-globe pointer" title="View Website" style="font-size:30px"></i></a>
+          </div>
+<!--Second icon takes up two columns on xs device.-->
                    <div class="col-xs-2">
-                      <a href="https://github.com/alexandraleah/cayuga-daylilies" target="_blank" data-toggle="tooltip" title="Code"><i class="fa fa-github pointer" title="View Code" style="font-size:30px"></i></a></p>
+<!--Set this icon to link to the code for your project-->
+                      <a href="https://github.com/alexandraleah/cayuga-daylilies" target="_blank" data-toggle="tooltip" title="Code"><i class="fa fa-code pointer" title="View Code" style="font-size:30px"></i></a></p>
                     </div>
                     <div class="col-xs-2 col-xs-offset-2">
                      <a data-toggle="tooltip" title="More"><i class="fa fa-long-arrow-right pointer arrow" style="font-size:30px" title="Read More"></i></a>
@@ -124,190 +92,20 @@
             </div>
           </div>
         </div>
-<!--second card -->
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="flip-container">
-            <div class="flipper pointer center-block">
-              <div class="front">
-                <div class="row no-gutters">
-                  <div class="col-xs-12 no-gutters">
-                    <div id="portal" class="portfolio-content"></div>
-                    <h4 class="text-center">Data portal</a></h4>
-                  </div>
-              </div>
-<!--Buttons linked to website and github-->
-                  <div class="row no-gutters">
-                    <div class="col-xs-2 col-xs-offset-4">
-                      <a href="http://alexash.x10host.com/dataportal" target="_blank" data-toggle="tooltip" title="Website"><i class="fa fa-globe pointer" title="View Website" style="font-size:30px"></i></a>
-                    </div>
-                    <div class="col-xs-2">
-                      <a href="https://github.com/alexandraleah/dataportal" target="_blank" data-toggle="tooltip" title="Code"><i class="fa fa-github pointer" title="View Code" style="font-size:30px"></i></a>
-                    </div>
-                    <div class="col-xs-2 col-xs-offset-2">
-                      <a data-toggle="tooltip" title="More"><i class="fa fa-long-arrow-right pointer arrow" title="Read More" style="font-size:30px"></i></a>
-                    </div>
-                  </div>
-              </div>
-              <div class="back">
-                <div class="row no-gutters">
-                  <div class="col-xs-12 no-gutters">
-                    <div class="portfolio-content">
-                      <h4 class="text-center">Data portal</h4>
-                      <p>Developed a <a href="http://alexash.x10host.com/dataportal" target="_blank">web application</a> to allow users to visualize water quality data collected by Charles River Watershed Association.</p>
-                      <ul>
-                        <li>Front-end uses JavaScript, HTML, CSS</li>
-                        <li>Back-end uses PHP and MySQL database</li>
-                        <li>Displays data with Highcharts and Google Maps</li>
-                      </ul>
-                    </div>
-                  </div>
-              </div>
-<!--Buttons linked to website and github-->
-              <div class="row no-gutters">
-                <div class="col-xs-2">
-                  <a data-toggle="tooltip" title="Back"><i class="fa fa-long-arrow-left pointer arrow" title="Back" style="font-size:30px"></i></a>
-                </div>
-              <div class="col-xs-2 col-xs-offset-2">
-                <a href="http://alexash.x10host.com/dataportal" target="_blank" data-toggle="tooltip" title="Website"><i class="fa fa-globe pointer" title="View Website" style="font-size:30px"></i></a>
-              </div>
-              <div class="col-xs-2">
-                <a href="https://github.com/alexandraleah/dataportal" target="_blank" data-toggle="tooltip" title="Code"><i class="fa fa-github pointer" title="View Website" style="font-size:30px"></i></a>
-              </div></div>
-            </div>
-          </div>
-        </div></div>
-<!--third card -->
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="flip-container">
-            <div class="flipper pointer">
-              <div class="front">
-                <div  class="row no-gutters">
-                  <div class="col-xs-12 no-gutters">
-                    <div class="portfolio-content" id="flagging"></div>
-                    <h4 class="text-center">Water Quality Updates</h4>
-                  </div>
-                </div>
-<!--Buttons linked to website and github-->
-                  <div class="row no-gutters">
-                    <div class="col-xs-2 col-xs-offset-10">
-                    <a data-toggle="tooltip" title="More">
-    <i class="fa fa-long-arrow-right pointer arrow" title="Read More" style="font-size:30px"></i></a>
-                </div></div>
-              </div>
-              <div class="back">
-                <div class="row no-gutters">
-                  <div class="col-xs-12 no gutters">
-                    <div class="portfolio-content">
-                <h4 class="text-center">Water Quality Updates</h4>
-                <p>Worked with a developer to integrate a web application that displays when the Charles River is safe for boating into organization's website. I maintain and update the code. The website is off-line for winter.</p>
-                <ul>
-                  <li>Front-end uses HTML and CSS</li>
-                  <li>Backend uses MySQL database and PHP.</li>
-                  <li>Interfaces with HOBOlink weather station</li>
-                </ul>
-              </div>
-              </div>
-            </div>
-<!--Buttons linked to website and github-->
-                <div class="row no-gutters">
-                  <div class="col-xs-2">
-                  <a data-toggle="tooltip" title="Back">
-  <i class="fa fa-long-arrow-left pointer arrow" title="Back" style="font-size:30px"></i></a>
-              </div></div>
-              </div>
-            </div>
-          </div>
-        </div>
     </div>
-</div>
-<!-- Skills section -->
-<div id="skills" class="container-fluid text-center section">
-  <h2>SKILLS</h2>
-  <div class="row">
-    <div class="col-xs-12 col-sm-4 col-md-2">
-<!--icons using font awesome-->
-      <i class="fa fa-file-code-o" style="font-size:50px"></i>
-      <h4>HTML AND CSS</h4>
-    </div>
-    <div class="col-xs-12 col-sm-4 col-md-2">
-      <i class="fa fa-code" style="font-size:50px"></i>
-      <h4>JAVASCRIPT</h4>
-    </div>
-    <div class="col-xs-12 col-sm-4 col-md-2">
-    <i class="fa fa-database" style="font-size:50px"></i>
-      <h4>PHP AND SQL</h4>
-    </div>
-    <div class="col-xs-12 col-sm-4 col-md-2">
-      <i class="fa fa-cloud" style="font-size:50px"></i>
-      <h4>SALESFORCE</h4>
-    </div>
-    <div class="col-xs-12 col-sm-4 col-md-2">
-      <i class="fa fa-briefcase" style="font-size:50px"></i>
-      <h4>MARKETING</h4>
-    </div>
-    <div class="col-xs-12 col-sm-4 col-md-2">
-      <i class="fa fa-file-image-o" style="font-size:50px"></i>
-      <h4>GRAPHIC DESIGN</h4>
-    </div>
-  </div>
-</div>
-<!-- Connect footer-->
-<footer id="connect" class="text-center container-fluid">
-  <h2>CONNECT</h2>
-  <div class="row">
-    <div class="col-sm-4">
-      <a href="mailto:alexandraleah.ash@gmail.com" target="_top"><i class="fa fa-envelope" style="font-size:50px"></i><p>alexandraleah.ash@gmail.com</p></a>
-    </div>
-    <div class="col-sm-4">
-      <a href="https://github.com/alexandraleah/" target="_blank"><i class="fa fa-github" style="font-size:50px"></i><p>alexandraleah</p></a>
-    </div>
-    <div class="col-sm-4">
-      <a href="https://www.linkedin.com/in/alexandra-ash-57942323/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:50px"></i><p>LinkedIn</p></a>
-    </div>
-  </div>
-</footer>
+  <script>
 
-<script>
+  $(document).ready(function(){
 
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+  //turns on tooltip functionality
+    $('[data-toggle="tooltip"]').tooltip();
 
-   // Make sure this.hash has a value before overriding default behavior
-  if (this.hash !== "") {
+  //Flips card when card is clicked
+    $(".flipper").click(function() {
+      $(this).toggleClass('flip');
+    });
 
-    // Prevent default anchor click behavior
-    event.preventDefault();
-
-    // Store hash
-    var hash = this.hash;
-
-    // Using jQuery's animate() method to add smooth page scroll
-    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 900, function(){
-
-      // Add hash (#) to URL when done scrolling (default click behavior)
-      window.location.hash = hash;
-      });
-    } // End if
   });
-//turning on tooltip functionality
-  $('[data-toggle="tooltip"]').tooltip();
-
-//Flips card when card is clicked
-  $(".flipper").click(function() {
-    $(this).toggleClass('flip');
-  });
-
-//Hides nav bar after link is selected
-  $(document).on('click','.navbar-collapse.in',function(e) {
-      if( $(e.target).is('a:not(".dropdown-toggle")') ) {
-          $(this).collapse('hide');
-      }
-  });
-});
-</script>
-</body>
+  </script>
+  </body>
 </html>

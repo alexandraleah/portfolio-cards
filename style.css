@@ -1,14 +1,3 @@
-/*
-Colors:
-  #373733 (Jet)
-  #334E58 (Dark Slate Blue)
-  #E8E9F3 (Glitter)
-  #f0f0ee (Isabelline)
-Text
-  Body: Roboto, Jet, size 15px
-  Navbar and heading: Alegreya, uppercase
-
-Fonts color and line height for body*/
 body {
     font: 400 15px Roboto, sans-serif;
     line-height: 1.8;
@@ -35,44 +24,6 @@ body {
   }
 }
 
-/*styles for navbar*/
-.navbar {
-    margin-bottom: 0;
-    background-color: #334E58;
-    z-index: 9999;
-    border: 0;
-    font-size: 15px !important;
-    line-height: 1.42857143 !important;
-    letter-spacing: 4px;
-    border-radius: 0;
-    font-family: 'Alegreya', serif;
-    text-transform: uppercase;
-}
-
-
-.navbar li a, .navbar .navbar-brand {
-    color: #E8E9F3 !important;
-}
-
-/*navbar button changes color on hover*/
-.navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #E8E9F3 !important;
-    background-color: #102C37 !important;
-}
-
-.navbar-default .navbar-toggle {
-    border-color: transparent;
-    color: #E8E9F3 !important;
-}
-
-/*styles for jumbotron*/
-.jumbotron {
-    background-color: #334E58; /* dark slate blue */
-    color: #E8E9F3; /* glitter */
-    padding: 100px 25px 50px 25px;
-    font-family: 'Alegreya', serif;
-}
-
 /*Styles for section headings*/
 h2 {
     font-size: 24px;
@@ -91,21 +42,6 @@ h4 {
     font-weight: 400;
     text-transform: uppercase;
 
-}
-
-/*adds padding for sections*/
-.section {
-    padding: 60px 50px;
-}
-
-/*alternating background color for sections*/
-.bg-other {
-    background-color: #f0f0ee;
-}
-
-/*adds bottom margin to images*/
-img {
-  margin-bottom: 10px;
 }
 
 /* Color of icons*/
@@ -139,6 +75,7 @@ i {
   margin: 20px auto;
   width: 100%;
   max-width:480px;
+  background-color: #D3D3D3;
 
 }
 
