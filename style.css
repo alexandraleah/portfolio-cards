@@ -4,11 +4,6 @@ body {
     color: #373733;
 }
 
-/*class to center a div*/
-.col-centered{
-    float: none;
-    margin: 0 auto;
-}
 
 /*removes gutters from columns and rows*/
 .no-gutters {
@@ -75,7 +70,6 @@ i {
   margin: 20px auto;
   width: 100%;
   max-width:480px;
-  background-color: #D3D3D3;
 
 }
 
@@ -92,7 +86,8 @@ i {
 	position: absolute;
 	top: 0;
 	left: 0;
-  background-color: #ffffff;
+/*set color of card*/
+  background-color: #D3D3D3;;
   padding:10px;
   line-height: 1.8;
   overflow: auto;
