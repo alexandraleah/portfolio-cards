@@ -87,7 +87,7 @@ i {
 	top: 0;
 	left: 0;
 /*set color of card*/
-  background-color: #D3D3D3;;
+  background-color: #D3D3D3;
   padding:10px;
   line-height: 1.8;
   overflow: auto;
@@ -103,6 +103,7 @@ i {
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+  background-color: #D3D3D3;
 
 }
 
@@ -121,6 +122,7 @@ i {
 /*sets height of main content on back of card*/
 .back .portfolio-content {
   height: 370px;
+  background-color: #D3D3D3;
 }
 
 /*sets background image for each card by id*/
