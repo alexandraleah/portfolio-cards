@@ -1,14 +1,19 @@
+
 body {
-    font: 400 15px Roboto, sans-serif;
+    font: 400 15px Roboto, sans-serif;/*sets main font colors and size*/
     line-height: 1.8;
+<<<<<<< HEAD
 /*Main text color*/
     color: #373733;
 /*background color*/
     background-color:#FBFDF1;
+=======
+    color: #373733; /*sets the text color*/
+>>>>>>> e620d7b07df874919d9c18567d923073a9ddfdbe
 }
 
 
-/*removes gutters from columns and rows*/
+/*removes gutters from columns and rows assigned to this class*/
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -74,9 +79,9 @@ i {
   transform: rotateY(180deg);
 }
 
-/*sets size of card*/
+/*sets size of card. Width adjusts with size of screen and number of columns*/
 .flip-container, .front, .back {
-    height: 430px;
+  height: 430px;
   margin: 20px auto;
   width: 100%;
   max-width:480px;
@@ -102,6 +107,7 @@ i {
   background-color: #86abb4;
   padding:10px;
   line-height: 1.8;
+ /*If overflow will show a scroll bar*/
   overflow: auto;
 }
 
@@ -139,7 +145,7 @@ i {
   height: 360px;
 }
 
-/*sets background image for each card by id. Images will be cropped based on how wide the column is. Keep that in mind when choosing images. */
+/*sets background image for each card by id. Images will be cropped based on how wide the column is. */
 #first-project {
      background: url(images/photo1.jpeg);
     background-size: cover;
