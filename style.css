@@ -1,7 +1,10 @@
 body {
     font: 400 15px Roboto, sans-serif;
     line-height: 1.8;
+/*Main text color*/
     color: #373733;
+/*background color*/
+    background-color:#FBFDF1;
 }
 
 
@@ -33,7 +36,7 @@ h2 {
 h4 {
     font-size: 19px;
     line-height: 1.375em;
-    color: #2e2e30;
+    color: #373733;
     font-weight: 400;
     text-transform: uppercase;
 
@@ -52,7 +55,7 @@ i {
 /*styles for tooltips*/
 .tooltip > .tooltip-inner {
      background-color: #373733;
-     color: #E8E9F3;
+     color: #ffffff;
  }
 
 /*styles cursor as pointer*/
@@ -66,6 +69,8 @@ i {
 
 /*class applied by script to flip the card*/
 .flip {
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
@@ -88,12 +93,13 @@ i {
 
 /* hide back of pane during swap */
 .front, .back {
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
 /*set color of card*/
-  background-color: #D3D3D3;;
+  background-color: #86abb4;
   padding:10px;
   line-height: 1.8;
   overflow: auto;
@@ -103,11 +109,15 @@ i {
 .front {
   z-index: 2;
     /* for firefox 31 */
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
     transform: rotateY(0deg);
 }
 
 /* back, initially hidden pane */
 .back {
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
     transform: rotateY(180deg);
 
 }
