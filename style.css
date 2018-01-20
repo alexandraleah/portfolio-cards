@@ -13,19 +13,6 @@ body {
 }
 
 
-/*removes gutters from columns and rows assigned to this class*/
-.no-gutters {
-  margin-right: 0;
-  margin-left: 0;
-  padding-right: 0;
-  padding-left: 0;
-
-  > .col,
-  > [class*="col-"] {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
 
 /*Styles for section headings*/
 h2 {
