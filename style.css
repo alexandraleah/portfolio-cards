@@ -1,15 +1,14 @@
 
-body {
-    font: 400 15px Roboto, sans-serif;/*sets main font colors and size*/
+body{
+    font: 400 15px Roboto, sans-serif;
     line-height: 1.8;
-<<<<<<< HEAD
+
 /*Main text color*/
     color: #373733;
 /*background color*/
     background-color:#FBFDF1;
-=======
     color: #373733; /*sets the text color*/
->>>>>>> e620d7b07df874919d9c18567d923073a9ddfdbe
+ 
 }
 
 
@@ -90,10 +89,6 @@ i {
     position: absolute;
     top: 0;
     left: 0;
-/*set color of card*/
-  background-color: #86abb4;
-  padding:10px;
-  line-height: 1.8;
  /*If overflow will show a scroll bar*/
   overflow: auto;
 }
