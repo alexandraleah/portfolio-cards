@@ -1,18 +1,15 @@
 
 body{
     font: 400 15px Roboto, sans-serif;
-    line-height: 1.8;
+ /*line-height: 1.8;*/
 
 /*Main text color*/
     color: #373733;
 /*background color*/
-    background-color:#FBFDF1;
-    color: #373733; /*sets the text color*/
+    background-color:#fff;
+    
  
 }
-
-
-
 /*Styles for section headings*/
 h2 {
     font-size: 24px;
@@ -30,12 +27,13 @@ h4 {
     color: #373733;
     font-weight: 400;
     text-transform: uppercase;
+    margin: 20px 0px 20px 0px;
 
 }
 
 /*puts a margin around all content*/
 .section{
-    margin:30px;
+    margin:15px;
 }
 
 /* Color of icons*/
@@ -67,7 +65,7 @@ i {
 
 /*sets size of card. Width adjusts with size of screen and number of columns*/
 .flip-container, .front, .back {
-  height: 430px;
+  height: 460px;
   margin: 20px auto;
   width: 100%;
   max-width:480px;
@@ -80,6 +78,10 @@ i {
     transform-style: preserve-3d;
     position: relative;
 
+}
+
+.card-footer {
+    padding-bottom: 0;
 }
 
 /* hide back of pane during swap */
@@ -124,7 +126,7 @@ i {
 
 /*sets height of main content on back of card*/
 .back .portfolio-content {
-  height: 360px;
+  height: 400px;
 }
 
 /*sets background image for each card by id. Images will be cropped based on how wide the column is. */
